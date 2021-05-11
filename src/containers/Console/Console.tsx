@@ -1,11 +1,14 @@
 import React from 'react';
+import {ConsoleWrapper} from './ConsoleStyle';
 
 const Console = () => {
-    return (
-        <>
-            <h2>Конслоль</h2>
-        </>
-    );
+  return (
+    <>
+      <ConsoleWrapper>
+        <h2>Конслоль</h2>
+      </ConsoleWrapper>
+    </>
+  );
 };
 
 export default Console;

@@ -5,9 +5,9 @@ import {authenticate} from 'src/store/actions/auth';
 import {Dispatch} from 'redux';
 import {LoginForm, LogoStyled, Title, Wrapper, Button} from './LoginStyle';
 import {Form, Formik} from 'formik';
-import Error from 'src/components/Error/Error';
+import Error from 'src/components/error/Error';
 import * as Yup from 'yup';
-import Loader from 'src/components/Loader/Loader';
+import Loader from 'src/components/loader/Loader';
 import Inputs from 'src/components/inputs/Inputs';
 
 interface RootState {
