@@ -10,10 +10,18 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #E5E5E5;
+  line-height: 30px;
   height: 100%;
   color: #0D0D0D;
+  transition: 0.2s;
 }
 
+input, button{
+  outline: none;
+}
+button{
+  cursor: pointer;
+}
 nav ul{
   margin: 0;
   padding: 0;

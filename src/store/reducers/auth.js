@@ -7,6 +7,8 @@ export const initialState = {
   sessionKey: null,
   login: null,
   sublogin: null,
+  error: null,
+  isFetching: false
 };
 
 export default {
@@ -35,11 +37,23 @@ export default {
           sublogin: null,
         };
       },
+      [ActionTypes.AUTHENTICATE_ERROR]: (state, {payload}) => {
+        return {
+          ...state,
+          error: JSON.stringify(payload)
+        };
+      },
       [ActionTypes.LOGOUT]: (state) => {
         return {
           ...state,
           loading: false,
           sessionKey: null,
+        };
+      },
+      [ActionTypes.IS_FETCHING]: (state, {payload}) => {
+        return {
+          ...state,
+         isFetching: payload
         };
       },
     },

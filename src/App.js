@@ -4,7 +4,8 @@ import {PersistGate} from 'redux-persist/integration/react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import createStore from 'src/store';
-import LoginPage from 'src/containers/LoginPage';
+import LoginPage from 'src/containers/LoginPage/LoginPage';
+import Console from './containers/Console/Console';
 
 const {store, persistor} = createStore();
 
@@ -14,8 +15,11 @@ function App() {
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <Switch>
-            <Route path="/">
+            <Route exact path="/">
               <LoginPage />
+            </Route>
+            <Route path="/console">
+              <Console />
             </Route>
           </Switch>
         </PersistGate>
